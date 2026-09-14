@@ -1,0 +1,22 @@
+{
+  "name": "procedural-filepath-indexer",
+  "version": "0.1.0",
+  "description": "Procedurally index relative filepaths by subdir parts + filename, one filetype at a time — Python + TypeScript+zod",
+  "type": "module",
+  "scripts": {
+    "gen:zod": "ts-to-zod src/typescript/types.ts src/typescript/schemas.ts",
+    "build": "tsc --project tsconfig.json",
+    "index": "tsx src/typescript/indexer.ts",
+    "bench": "python audit/bench_indexer.py",
+    "test": "python -m pytest -q && npm run build"
+  },
+  "dependencies": {
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^26.5.1",
+    "ts-to-zod": "^3.13.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.3"
+  }
+}
