@@ -1,0 +1,12 @@
+.DS_Store
+*.swp
+*.swo
+*~
+# hardware optimize
+.venv/
+__pycache__/
+*.pyc
+/tmp/
+hf_cache/
+/media/
+node_modules/
